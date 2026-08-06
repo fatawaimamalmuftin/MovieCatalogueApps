@@ -41,7 +41,7 @@ nav>div:first-child{
     gap: 10px;
 }
 
-nav>div:last-child>button{
+nav>div:last-child>a{
     border: 2px solid;
     padding: 8px 20px;
     border-radius: 100px;
