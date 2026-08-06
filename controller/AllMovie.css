@@ -50,3 +50,64 @@ nav>div:last-child>button{
 }
 
 /* ------------navbar---------------- */
+
+
+div.card{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    img{
+        width: 200px;
+        cursor: pointer;
+    }
+    div{
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        div.judul{
+            font-size: 25px;
+            color: white;
+        }
+        ul{
+            display: flex;
+            gap: 10px;
+            margin-right: auto;
+            color: white;
+            li{
+                border: 2px solid white;
+                color: white;
+                padding: 5px;
+                border-radius: 20px;
+            }
+        }    
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            span:first-child{
+                border: 2px solid white;
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            span:last-child{
+                color: white;
+            }
+        }
+        div{
+            color: white;
+        }
+        div{
+            div{
+                border: 2px solid white;
+                color: white;
+                padding: 5px;
+                border-radius: 10px;                
+            }
+        }        
+    }
+}
+
+/* -------------CARD------------------ */
