@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Movie</title>
+
+    <link rel="stylesheet" href="../../controller/AllMovie.css">
+    <script src="../../controller/AllMovie.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bgMain">
+    <header
+    class="px-[150px]"
+    style="border-bottom: 2px solid #EBD3F8;">
+        <nav>
+            <div>
+                <img 
+                src="../../model/assets/logo.svg" 
+                alt="logo"
+                class="w-[24px] h-[24px]">
+                <span class="contrast">MOVIESPACE</span>
+            </div>
+
+            <div
+            class="contrast flex gap-8 text-l items-center">
+                <div>ALL FILMS</div>
+                <div>MY WATCHLISTS</div>
+                <a href="../auth/login.html">LOGIN</a>
+                <!-- <button>LOGIN</button> -->
+            </div>
+        </nav>
+    </header>
+    <main
+     class="flex flex-col gap-8 px-[180px] my-10">
+     <div class="text-white">All Films /</div>
+     <div class="flex gap-2">
+        <button class="border-2 border-white-500 rounded-2xl p-2 text-white">GENRE</button>
+        <button class="border-2 border-white-500 rounded-2xl p-2 text-white">SORT BY IMDB</button>
+    </div>
+     <div class="flex flex-col gap-8">
+        <div class="card">
+            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
+            <div>
+                <div class="judul">RRR</div>
+                <ul>
+                    <li>Action</li>
+                    <li>Fiction</li>
+                    <li>Golden</li>
+                </ul>
+                <div>
+                    <span>IMDB</span>
+                    <span>9.9</span>
+                </div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
+                <div>
+                    <div>View Details</div>
+                    <div>ADD TO WATCHLISTS</div>
+                </div>
+            </div>
+        </div>
+     </div>
+    </main>    
+</body>
+</html>

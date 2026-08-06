@@ -58,6 +58,7 @@ div.card{
     justify-content: space-between;
     img{
         width: 200px;
+        /* height: 5px; */
         cursor: pointer;
     }
     div{
