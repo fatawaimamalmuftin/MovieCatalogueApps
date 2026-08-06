@@ -7,14 +7,56 @@
 
     <link rel="stylesheet" href="../../controller/auth.css">
     <script src="../../controller/auth.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <nav></nav>
+<body class="bgMain">
+    <header
+    class="px-[150px]"
+    style="border-bottom: 2px solid #EBD3F8;">
+        <nav>
+            <div>
+                <img 
+                src="../../model/assets/logo.svg" 
+                alt="logo"
+                class="w-[24px] h-[24px]">
+                <span class="contrast">MOVIESPACE</span>
+            </div>
+
+            <div
+            class="contrast flex gap-8 text-l items-center">
+                <div>ALL FILMS</div>
+                <div>MY WATCHLISTS</div>
+                <button>LOGIN</button>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        
-    </main>    
+    <div class="tabel">
+        <div>
+            <img src="../../model//assets/logo.svg" alt="">
+            <span>MOVIESPACE</span>
+        </div>
+
+        <div class="alert">a</div>
+        <div class="input">
+            <label>
+                Email
+                <input type="email" placeholder="exemple@mail.com">
+            </label>
+        </div>
+
+        <div class="alert">a</div>
+        <div class="input">
+            <label>
+                Password
+                <input type="password" placeholder="input here">
+            </label>
+        </div>
+
+        <button>SIGNUP</button>
+
+        <div>Registered User? Login here</div>
+    </div>
+
 </body>
 </html>
