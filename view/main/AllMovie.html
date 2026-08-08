@@ -5,336 +5,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Catalogue Apps</title>
 
-    <link rel="stylesheet" href="../../controller/AllMovie.css">
-    <script src="../../controller/AllMovie.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../controller/AllMovie.js" defer></script>
 </head>
-<body class="bgMain">
-    <header
-    class="px-[150px]"
-    style="border-bottom: 2px solid #EBD3F8;">
-        <nav>
-            <div>
-                <!-- <a href="./DetailMovie.html"> -->
-                    <img 
-                    src="../../model/assets/logo.svg" 
-                    alt="logo"
-                    class="w-[24px] h-[24px]">
-                <!-- </a> -->
-                <span class="contrast">MOVIESPACE</span>
+
+<body class="min-h-screen bg-[#2E073F] text-white">
+
+    <!-- NAVBAR -->
+    <header class="border-b border-[#EBD3F8]/30 bg-[#2E073F]/95 backdrop-blur-md">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <img
+                    src="../../model/assets/logo.svg"
+                    alt="MovieSpace Logo"
+                    class="h-7 w-7"
+                >
+
+                <span class="text-lg font-bold tracking-wide text-white">
+                    MOVIESPACE
+                </span>
             </div>
 
-            <div
-            class="contrast flex gap-8 text-l items-center">
-                <div>ALL FILMS</div>
-                <div>MY WATCHLISTS</div>
-                <a href="../auth/login.html">LOGIN</a>
-                <!-- <button>LOGIN</button> -->
+            <!-- Navigation -->
+            <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+
+                <a
+                    href="#"
+                    class="text-[#EBD3F8] transition hover:text-[#AD49E1]"
+                >
+                    ALL FILMS
+                </a>
+
+                <a
+                    href="#"
+                    class="text-[#EBD3F8] transition hover:text-[#AD49E1]"
+                >
+                    MY WATCHLISTS
+                </a>
+
+                <a
+                    href="../auth/login.html"
+                    class="rounded-full bg-[#AD49E1] px-6 py-2.5 font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20"
+                >
+                    LOGIN
+                </a>
+
             </div>
+
+            <!-- Mobile Login -->
+            <a
+                href="../auth/login.html"
+                class="rounded-full bg-[#AD49E1] px-4 py-2 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] md:hidden"
+            >
+                LOGIN
+            </a>
+
         </nav>
     </header>
-    <main
-     class="flex flex-col gap-8 px-[180px] my-10">
-     <div class="text-white">All Films (30)</div>
-     <div class="flex gap-2">
-        <button class="border-2 border-white-500 rounded-2xl p-2 text-white">GENRE</button>
-        <button class="border-2 border-white-500 rounded-2xl p-2 text-white">SORT BY IMDB</button>
-    </div>
-     <div class="flex flex-col gap-8">
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+    <!-- MAIN -->
+    <main class="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10">
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+        <!-- Page Header -->
+        <section class="mb-8">
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
+            <div class="mb-2 flex items-center justify-between">
                 <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+                    <p class="mb-2 text-sm font-medium uppercase tracking-[0.25em] text-[#AD49E1]">
+                        Movie Catalogue
+                    </p>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
+                    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                        All Films
+                    </h1>
                 </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
+                <span class="rounded-full border border-[#AD49E1]/30 bg-[#AD49E1]/10 px-4 py-2 text-sm font-medium text-[#EBD3F8]">
+                    30 Movies
+                </span>
             </div>
-        </div>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+            <p class="max-w-2xl text-sm leading-6 text-[#EBD3F8]/70 sm:text-base">
+                Explore our movie collection and discover your next favorite film.
+            </p>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+        <!-- FILTER -->
+        <section class="mb-10 flex flex-wrap gap-3">
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+            <button
+                type="button"
+                class="flex items-center gap-2 rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#EBD3F8] backdrop-blur-sm transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white"
+            >
+                <span>GENRE</span>
+                <span class="text-xs">▼</span>
+            </button>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
+            <button
+                type="button"
+                class="flex items-center gap-2 rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#EBD3F8] backdrop-blur-sm transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white"
+            >
+                <span>SORT BY IMDB</span>
+                <span class="text-xs">▼</span>
+            </button>
 
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
+        </section>
+
+
+        <!-- MOVIE LIST -->
+        <section class="flex flex-col gap-6">
+
+
+            <!-- MOVIE CARD -->
+            <article
+                class="group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5"
+            >
+
+                <!-- Poster -->
+                <div class="shrink-0 overflow-hidden rounded-xl sm:w-[200px]">
+                    <img
+                        src="../../model/assets/flayerFilm.png"
+                        alt="RRR Movie Poster"
+                        class="h-full w-full cursor-pointer object-cover transition duration-500 group-hover:scale-105"
+                    >
                 </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
+
+
+                <!-- Movie Information -->
+                <div class="flex min-w-0 flex-1 flex-col justify-between gap-5">
+
+                    <div class="space-y-4">
+
+                        <!-- Title -->
+                        <h2 class="text-2xl font-bold text-white sm:text-3xl">
+                            RRR
+                        </h2>
+
+
+                        <!-- Genres -->
+                        <ul class="flex flex-wrap gap-2">
+                            <li class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Action
+                            </li>
+
+                            <li class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Fiction
+                            </li>
+
+                            <li class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Golden
+                            </li>
+                        </ul>
+
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-3">
+
+                            <span class="rounded-lg bg-[#F5C518] px-3 py-1.5 text-xs font-bold text-black">
+                                IMDb
+                            </span>
+
+                            <span class="text-lg font-bold text-white">
+                                9.9
+                            </span>
+
+                            <span class="text-sm text-[#EBD3F8]/60">
+                                / 10
+                            </span>
+
+                        </div>
+
+
+                        <!-- Description -->
+                        <p class="max-w-3xl text-sm leading-7 text-[#EBD3F8]/70 sm:text-base">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Dolores molestias laudantium amet! Error cupiditate, odit
+                            sunt porro doloribus id perspiciatis adipisci odio quaerat
+                            nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus
+                            officiis molestiae vel ullam possimus veniam facilis.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Actions -->
+                    <div class="flex flex-wrap gap-3">
+
+                        <button
+                            type="button"
+                            class="rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rounded-xl bg-[#AD49E1] px-5 py-2.5 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20"
+                        >
+                            Add to Watchlist
+                        </button>
+
+                    </div>
+
                 </div>
-            </div>
-        </div>
-     </div>
-    </main>    
+
+            </article>
+
+
+            <!-- COPY MOVIE CARD -->
+            <article
+                class="group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5"
+            >
+
+                <div class="shrink-0 overflow-hidden rounded-xl sm:w-[200px]">
+                    <img
+                        src="../../model/assets/flayerFilm.png"
+                        alt="RRR Movie Poster"
+                        class="h-full w-full cursor-pointer object-cover transition duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+                <div class="flex min-w-0 flex-1 flex-col justify-between gap-5">
+
+                    <div class="space-y-4">
+
+                        <h2 class="text-2xl font-bold text-white sm:text-3xl">
+                            RRR
+                        </h2>
+
+                        <ul class="flex flex-wrap gap-2">
+                            <li class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Action
+                            </li>
+
+                            <li class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Fiction
+                            </li>
+
+                            <li class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Golden
+                            </li>
+                        </ul>
+
+                        <div class="flex items-center gap-3">
+                            <span class="rounded-lg bg-[#F5C518] px-3 py-1.5 text-xs font-bold text-black">
+                                IMDb
+                            </span>
+
+                            <span class="text-lg font-bold text-white">
+                                9.9
+                            </span>
+
+                            <span class="text-sm text-[#EBD3F8]/60">
+                                / 10
+                            </span>
+                        </div>
+
+                        <p class="max-w-3xl text-sm leading-7 text-[#EBD3F8]/70 sm:text-base">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Dolores molestias laudantium amet! Error cupiditate, odit
+                            sunt porro doloribus id perspiciatis adipisci odio quaerat
+                            nesciunt deserunt.
+                        </p>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <button
+                            type="button"
+                            class="rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            type="button"
+                            class="rounded-xl bg-[#AD49E1] px-5 py-2.5 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20"
+                        >
+                            Add to Watchlist
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!--
+                CARD LAINNYA TINGGAL MENGGUNAKAN
+                TEMPLATE CARD DI ATAS.
+
+                Nanti ketika API TMDB sudah dipakai,
+                bagian ini sebaiknya dibuat menggunakan
+                JavaScript .map() / loop sehingga tidak
+                perlu menulis 30 card secara manual.
+            -->
+
+        </section>
+
+    </main>
+
 </body>
 </html>
+```
