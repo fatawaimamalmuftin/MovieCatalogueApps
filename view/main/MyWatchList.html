@@ -1,65 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Watch List</title>
+    <title>My Watchlists - MovieSpace</title>
 
-    <link rel="stylesheet" href="../../controller/AllMovie.css">
-    <script src="../../controller/AllMovie.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../controller/Watchlist.js" defer></script>
 </head>
-<body class="bgMain">
-    <header
-    class="px-[150px]"
-    style="border-bottom: 2px solid #EBD3F8;">
-        <nav>
-            <div>
-                <img 
-                src="../../model/assets/logo.svg" 
-                alt="logo"
-                class="w-[24px] h-[24px]">
-                <span class="contrast">MOVIESPACE</span>
+
+
+<body class="min-h-screen bg-[#2E073F] text-white">
+
+    <!-- NAVBAR -->
+
+    <header class="border-b border-[#EBD3F8]/20 bg-[#2E073F]/95 backdrop-blur-md">
+
+        <nav
+            class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+
+            <!-- Logo -->
+
+            <div class="flex items-center gap-3">
+
+                <img
+                    src="../../model/assets/logo.svg"
+                    alt="MovieSpace Logo"
+                    class="h-7 w-7">
+                <span class="text-lg font-bold tracking-wide">
+                    MOVIESPACE
+                </span>
+
             </div>
+
+
+            <!-- Navigation -->
+
+            <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+
+                <a
+                    href="./AllMovie.html"
+                    class="text-[#EBD3F8]/70 transition hover:text-[#AD49E1]">
+                    ALL FILMS
+                </a>
+
+                <a
+                    href="./MyWatchList.html"
+                    class="text-[#AD49E1]">
+                    MY WATCHLISTS
+                </a>
+
+                <a
+                    href="../auth/login.html"
+                    class="rounded-full bg-[#AD49E1] px-6 py-2.5 font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20">
+                    LOGIN
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Login -->
+
+            <a
+                href="../auth/login.html"
+                class="rounded-full bg-[#AD49E1] px-4 py-2 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] md:hidden">
+                LOGIN
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main
+        class="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10">
+
+        <!-- PAGE HEADER -->
+
+        <section class="mb-8">
+
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+
+                <div>
+
+                    <p
+                        class="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-[#AD49E1]">
+                        Your Collection
+                    </p>
+
+                    <h1
+                        class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                        My Watchlists
+                    </h1>
+
+                    <p
+                        class="mt-2 text-sm text-[#EBD3F8]/60 sm:text-base">
+                        Movies you've saved to watch later.
+                    </p>
+
+                </div>
+
+
+                <!-- Movie Counter -->
+
+                <div
+                    class="flex w-fit items-center gap-2 rounded-full border border-[#AD49E1]/30 bg-[#AD49E1]/10 px-4 py-2">
+
+                    <span class="h-2 w-2 rounded-full bg-[#AD49E1]"></span>
+
+                    <span class="text-sm font-medium text-[#EBD3F8]">
+                        1 Movie
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- WATCHLIST -->
+
+        <section class="flex flex-col gap-6">
+
+            <!-- MOVIE -->
+
+            <article
+                class="group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] sm:flex-row sm:p-5">
+
+                <!-- Poster -->
+
+                <div
+                    class="flex shrink-0 items-center justify-center overflow-hidden rounded-xl bg-black/20 sm:w-[200px]"
+                >
+
+                    <img
+                        src="../../model/assets/flayerFilm.png"
+                        alt="RRR Movie Poster"
+                        class="max-h-[300px] w-auto max-w-full cursor-pointer rounded-xl object-contain transition duration-500 group-hover:scale-105 sm:max-h-[280px]">
+                </div>
+
+                <!-- Movie Information -->
+
+                <div
+                    class="flex min-w-0 flex-1 flex-col justify-between gap-6">
+
+                    <!-- Information -->
+
+                    <div class="space-y-4">
+
+
+                        <!-- Title -->
+
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+
+                            <div>
+
+                                <p
+                                    class="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#AD49E1]"
+                                >
+                                    Saved Movie
+                                </p>
+
+                                <h2
+                                    class="text-2xl font-bold text-white sm:text-3xl">
+                                    RRR
+                                </h2>
+
+                            </div>
+
+
+                            <!-- Saved -->
+
+                            <span
+                                class="rounded-full border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300">
+                                ✓ Saved
+                            </span>
+
+                        </div>
+
+                        <!-- Genres -->
+
+                        <ul class="flex flex-wrap gap-2">
+
+                            <li
+                                class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Action
+                            </li>
+
+                            <li
+                                class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Fiction
+                            </li>
+
+                            <li
+                                class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                                Golden
+                            </li>
+
+                        </ul>
+
+                        <!-- Rating -->
+
+                        <div class="flex items-center gap-3">
+
+                            <span
+                                class="rounded-lg bg-[#F5C518] px-3 py-1.5 text-xs font-black text-black">
+                                IMDb
+                            </span>
+
+                            <span class="text-lg font-bold">
+                                9.9
+                            </span>
+
+                            <span class="text-sm text-[#EBD3F8]/50">
+                                / 10
+                            </span>
+
+                        </div>
+
+                        <!-- Overview -->
+
+                        <p
+                            class="max-w-3xl text-sm leading-7 text-[#EBD3F8]/65 sm:text-base">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Dolores molestias laudantium amet! Error cupiditate, odit
+                            sunt porro doloribus id perspiciatis adipisci odio quaerat
+                            nesciunt deserunt.
+                        </p>
+
+                    </div>
+
+                    <!-- ACTIONS -->
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <!-- Detail -->
+
+                        <a
+                            href="./DetailMovie.html"
+                            class="rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white">
+                            View Details
+                        </a>
+
+                        <!-- Remove -->
+
+                        <button
+                            type="button"
+                            class="rounded-xl border border-red-400/30 bg-red-400/5 px-5 py-2.5 text-sm font-semibold text-red-300 transition hover:border-red-400/60 hover:bg-red-400/10 hover:text-red-200">
+                            Remove from Watchlist
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+        <section
+            class="mt-10 hidden rounded-3xl border border-dashed border-white/10 bg-white/[0.03] px-6 py-16 text-center">
 
             <div
-            class="contrast flex gap-8 text-l items-center">
-                <div>ALL FILMS</div>
-                <div>MY WATCHLISTS</div>
-                <a href="../auth/login.html">LOGIN</a>
-                <!-- <button>LOGIN</button> -->
+                class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#AD49E1]/10 text-2xl">
+                🎬
             </div>
-        </nav>
-    </header>
-    <main
-     class="flex flex-col gap-8 px-[180px] my-10">
-     <div class="text-white">My Watchlists (1)</div>
-     <div class="flex gap-2">
-        <button class="border-2 border-white-500 rounded-2xl p-2 text-white">GENRE</button>
-        <button class="border-2 border-white-500 rounded-2xl p-2 text-white">SORT BY IMDB</button>
-    </div>
-     <div class="flex flex-col gap-8">
-        <div class="card">
-            <img src="../../model/assets/flayerFilm.png" alt="flayerFilm">
-            <div>
-                <div class="judul">RRR</div>
-                <ul>
-                    <li>Action</li>
-                    <li>Fiction</li>
-                    <li>Golden</li>
-                </ul>
-                <div>
-                    <span>IMDB</span>
-                    <span>9.9</span>
-                </div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores molestias laudantium amet! Error cupiditate, odit sunt porro doloribus id perspiciatis adipisci odio quaerat nesciunt deserunt. Eum odit pariatur quas sequi necessitatibus officiis molestiae vel ullam possimus veniam facilis, omnis sapiente ab ipsa tenetur nostrum vero ducimus dolores quae ipsam fugiat.</div>
-                <div>
-                    <div>View Details</div>
-                    <div>ADD TO WATCHLISTS</div>
-                </div>
-            </div>
-        </div>
-     </div>
-    </main>    
+
+            <h2 class="text-xl font-bold">
+                Your watchlist is empty
+            </h2>
+
+            <p
+                class="mx-auto mt-2 max-w-md text-sm leading-6 text-[#EBD3F8]/50">
+                You haven't saved any movies yet. Explore our movie catalogue
+                and add something you want to watch later.
+            </p>
+
+            <a
+                href="./AllMovie.html"
+                class="mt-6 inline-flex rounded-xl bg-[#AD49E1] px-6 py-3 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20">
+                Explore Movies
+            </a>
+
+        </section>
+
+    </main>
+
 </body>
+
 </html>
