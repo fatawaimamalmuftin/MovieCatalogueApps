@@ -1,61 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>auth/login</title>
-    
-    <link rel="stylesheet" href="../../controller/auth.css">
-    <script src="../../controller/auth.js"></script>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Login - MovieSpace</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../controller/auth.js" defer></script>
 </head>
-<body class="bgMain">
-    <header
-    class="px-[150px]"
-    style="border-bottom: 2px solid #EBD3F8;">
-        <nav>
-            <div>
-                <img 
-                src="../../model/assets/logo.svg" 
-                alt="logo"
-                class="w-[24px] h-[24px]">
-                <span class="contrast">MOVIESPACE</span>
+
+
+<body class="min-h-screen bg-[#2E073F] text-white">
+
+    <!-- NAVBAR -->
+    <header class="border-b border-[#AD49E1]/40">
+
+        <nav
+            class="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+
+            <!-- LOGO -->
+
+            <a
+                href="../main/AllMovie.html"
+                class="flex items-center gap-2">
+
+                <img
+                    src="../../model/assets/logo.svg"
+                    alt="MovieSpace Logo"
+                    class="h-5 w-5">
+
+                <span
+                    class="text-sm font-semibold tracking-wider text-[#AD49E1]">
+                    MOVIESPACE
+                </span>
+
+            </a>
+
+            <!-- NAVIGATION -->
+
+            <div class="flex items-center gap-6">
+
+                <a
+                    href="../main/AllMovie.html"
+                    class="text-xs font-medium tracking-wider text-white/80 transition hover:text-[#AD49E1]">
+                    ALL FILMS
+                </a>
+
+                <span
+                    class="rounded-full bg-[#AD49E1] px-5 py-2 text-xs font-semibold tracking-wider text-[#2E073F]">
+                    LOGIN
+                </span>
+
             </div>
 
-            <div
-            class="contrast flex gap-8 text-l items-center">
-                <a href="../main/AllMovie.html">ALL FILMS</a>
-                <button>LOGIN</button>
-            </div>
         </nav>
-    </header> 
 
-    <div class="tabel">
-        <div>
-            <img src="../../model//assets/logo.svg" alt="">
-            <span>MOVIESPACE</span>
-        </div>
+    </header>
 
-        <div class="alert">a</div>
-        <div class="input">
-            <label>
-                Email
-                <input type="email" placeholder="exemple@mail.com">
-            </label>
-        </div>
 
-        <div class="alert">a</div>
-        <div class="input">
-            <label>
-                Password
-                <input type="password" placeholder="input here">
-            </label>
-        </div>
+    <!-- LOGIN -->
+    <main
+        class="flex min-h-[calc(100vh-64px)] items-start justify-center px-6 pt-24 sm:pt-28">
 
-        <button>LOGIN</button>
+        <section class="w-full max-w-[380px]">
 
-        <div>New User? Register <a href="./regis.html">here</a></div>
-    </div>
+            <!-- MOVIESPACE -->
+            <div class="mb-10 flex justify-center">
+
+                <div class="flex items-center gap-2">
+
+                    <img
+                        src="../../model/assets/logo.svg"
+                        alt="MovieSpace Logo"
+                        class="h-5 w-5">
+
+                    <span
+                        class="text-sm font-semibold tracking-wider text-[#AD49E1]">
+                        MOVIESPACE
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+            <form
+                id="loginForm"
+                class="flex flex-col gap-6">
+
+                <!-- EMAIL -->
+                <div>
+
+                    <label
+                        class="flex items-center gap-2 block text-sm font-medium text-white/90 w-full border-0 border-b border-white/40 bg-transparent">
+                        Email
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="example@mail.com"
+                            autocomplete="email"
+                            class="bg-transparent px-0 py-2 text-sm text-white outline-none placeholder:text-white/30 transition focus:border-[#AD49E1]">
+                    </label>
+
+
+                    <!-- EMAIL ERROR -->
+                    <p
+                        id="emailError"
+                        class="mt-1 min-h-[16px] text-xs font-medium text-red-400"
+                    ></p>
+
+                </div>
+
+                <!-- PASSWORD -->
+                <div>
+
+                    <label
+                        class="flex items-center gap-2 block text-sm font-medium text-white/90 w-full border-0 border-b border-white/40 bg-transparent">
+                        Password
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            class="bg-transparent px-0 py-2 text-sm text-white outline-none placeholder:text-white/30 transition focus:border-[#AD49E1]">
+                    </label>
+
+
+                    <!-- PASSWORD ERROR -->
+                    <p
+                        id="passwordError"
+                        class="mt-1 min-h-[16px] text-xs font-medium text-red-400"
+                    ></p>
+
+                </div>
+
+                <!-- ACCOUNT ERROR -->
+                <p
+                    id="accountError"
+                    class="min-h-[16px] text-center text-xs font-medium text-red-400"
+                ></p>
+
+                <!-- LOGIN BUTTON -->
+                <div class="flex justify-center pt-1">
+
+                    <button
+                        id="loginButton"
+                        type="submit"
+                        class="rounded-full bg-[#AD49E1] px-7 py-2.5 text-xs font-bold tracking-wider text-[#2E073F] transition duration-200 hover:bg-[#c56de8] hover:shadow-lg hover:shadow-[#AD49E1]/20 active:scale-95">
+                        LOGIN
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- REGISTER -->
+            <div
+                class="mt-7 text-center text-xs font-medium tracking-wide text-[#AD49E1]">
+
+                <span>
+                    NEW USER?
+                </span>
+
+                <a
+                    href="./regis.html"
+                    class="ml-1 underline underline-offset-2 transition hover:text-[#d28aef]">
+                    REGISTER HERE
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
+
 </html>
