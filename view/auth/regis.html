@@ -7,7 +7,7 @@
     <title>Register - MovieSpace</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../../controller/auth.js" defer ></script>
+    <script src="../../controller/authRegis.js" defer ></script>
 </head>
 
 <body class="min-h-screen bg-[#2E073F] text-white">
@@ -95,7 +95,7 @@
                         class="flex items-center gap-2 block text-sm font-medium text-white/90 w-full border-0 border-b border-white/40 bg-transparent">
                         Email
                         <input
-                            id="email"
+                            id="inputEmail"
                             name="email"
                             type="email"
                             placeholder="example@mail.com"
@@ -119,7 +119,7 @@
                         class="flex items-center gap-2 w-full border-0 border-b border-white/40 block text-sm font-medium text-white/90">
                         Password
                         <input
-                            id="password"
+                            id="inputPassword"
                             name="password"
                             type="password"
                             placeholder="Enter your password"
@@ -145,18 +145,18 @@
                         class="flex items-center gap-2 w-full border-0 border-b border-white/40 block text-sm font-medium text-white/90">
                         Confirm Password
                         <input
-                            id="password"
-                            name="password"
+                            id="inputConfirmPassword"
+                            name="confirmPassword"
                             type="password"
-                            placeholder="Enter your password"
-                            autocomplete="new-password"
+                            placeholder="Enter your confirmPassword"
+                            autocomplete="new-confirmPassword"
                             class="bg-transparent px-0 py-2 text-sm text-white outline-none placeholder:text-white/30 transition focus:border-[#AD49E1]">
                     </label>
 
                     <!-- CONFERM PASSWORD ERROR -->
 
                     <p
-                        id="passwordError"
+                        id="confirmPasswordError"
                         class="mt-1 min-h-[16px] text-xs font-medium text-red-400"
                     ></p>
 
