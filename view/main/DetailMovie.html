@@ -8,6 +8,7 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../../controller/DetailMovie.js" defer></script>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-[#2E073F] text-white">
@@ -99,107 +100,86 @@
         <section
             class="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/20">
 
-            <div class="grid lg:grid-cols-[280px_1fr]">
+            <div 
+            id="container"
+            class="grid lg:grid-cols-[280px_1fr]">
 
                 <!-- POSTER -->
 
-                <div class="relative h-[420px] overflow-hidden sm:h-[500px] lg:h-full lg:min-h-[600px]">
+                <!-- <div class="relative h-[420px] overflow-hidden sm:h-[500px] lg:h-full lg:min-h-[600px]">
 
                     <img
                         src="../../model/assets/flayerFilm.png"
                         alt="RRR Movie Poster"
                         class="h-full w-full object-cover">
-                </div>
+                </div> -->
 
                 <!-- MOVIE INFORMATION -->
 
-                <div class="flex flex-col justify-between p-6 sm:p-8 lg:p-12">
+                <!-- <div class="flex flex-col justify-between p-6 sm:p-8 lg:p-12">
+                    <div class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#AD49E1]">
+                        Movie Details
+                    </div>
+                    <h1
+                        class="mb-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                        RRR
+                    </h1>
+                    <div class="mb-6 flex flex-wrap gap-2">
 
-                    <!-- Top Content -->
+                        <span
+                            class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-4 py-1.5 text-sm font-medium text-[#EBD3F8]">
+                            Action
+                        </span>
 
-                    <div>
+                        <span
+                            class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-4 py-1.5 text-sm font-medium text-[#EBD3F8]">
+                            Fiction
+                        </span>
 
-                        <!-- Category -->
+                        <span
+                            class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-4 py-1.5 text-sm font-medium text-[#EBD3F8]">
+                            Drama
+                        </span>
 
-                        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#AD49E1]">
-                            Movie Details
-                        </p>
+                    </div>
+                    <div class="mb-8 flex items-center gap-4">
+                        
+                        <span class="text-xl text-[#EBD3F8]/50">
+                            9.9 / 10
+                        </span>
 
-                        <!-- Title -->
+                        <img 
+                        class="w-7 h-7"
+                        src="../../model/assets/star.svg" 
+                        alt="star" >
 
-                        <h1
-                            class="mb-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                            RRR
-                        </h1>
+                        <div
+                            class="flex items-center gap-2 rounded-xl bg-[#F5C518] px-4 py-2">
 
-                        <!-- Genre -->
-
-                        <div class="mb-6 flex flex-wrap gap-2">
-
-                            <span
-                                class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-4 py-1.5 text-sm font-medium text-[#EBD3F8]">
-                                Action
+                            <span class="text-sm font-extrabold text-black">
+                                IMDb
                             </span>
-
-                            <span
-                                class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-4 py-1.5 text-sm font-medium text-[#EBD3F8]">
-                                Fiction
-                            </span>
-
-                            <span
-                                class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-4 py-1.5 text-sm font-medium text-[#EBD3F8]">
-                                Drama
-                            </span>
-
-                        </div>
-
-                        <!-- Rating -->
-
-                        <div class="mb-8 flex items-center gap-4">
-
-                            <div
-                                class="flex items-center gap-2 rounded-xl bg-[#F5C518] px-4 py-2">
-
-                                <span class="text-sm font-extrabold text-black">
-                                    IMDb
-                                </span>
-
-                                <span class="text-lg font-black text-black">
-                                    9.9
-                                </span>
-
-                            </div>
-
-                            <span class="text-sm text-[#EBD3F8]/50">
-                                9.9 / 10
-                            </span>
-
-                        </div>
-
-                        <!-- Overview -->
-
-                        <div>
-
-                            <h2 class="mb-3 text-lg font-bold">
-                                Overview
-                            </h2>
-
-                            <p
-                                class="max-w-3xl text-sm leading-7 text-[#EBD3F8]/70 sm:text-base">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Dolores molestias laudantium amet! Error cupiditate,
-                                odit sunt porro doloribus id perspiciatis adipisci odio
-                                quaerat nesciunt deserunt. Eum odit pariatur quas sequi
-                                necessitatibus officiis molestiae vel ullam possimus
-                                veniam facilis.
-                            </p>
 
                         </div>
 
                     </div>
+                    <div>
 
-                    <!-- ACTIONS -->
+                        <h2 class="mb-3 text-lg font-bold">
+                            Deskripsi
+                        </h2>
 
+                        <p
+                            class="max-w-3xl text-sm leading-7 text-[#EBD3F8]/70 sm:text-base">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dolores molestias laudantium amet! Error cupiditate,
+                            odit sunt porro doloribus id perspiciatis adipisci odio
+                            quaerat nesciunt deserunt. Eum odit pariatur quas sequi
+                            necessitatibus officiis molestiae vel ullam possimus
+                            veniam facilis.
+                        </p>
+
+                    </div>
                     <div class="flex flex-wrap gap-3">
 
                         <button
@@ -216,7 +196,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 
