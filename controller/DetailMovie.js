@@ -44,15 +44,11 @@ document.addEventListener('DOMContentLoaded',async () => {
         divL.append(img)
 
         const divR = document.createElement('div')
-        divR.setAttribute('class','flex flex-col justify-between p-6 sm:p-8 lg:p-12')
+        divR.setAttribute('class','flex flex-col justify-between sm:p-8 lg:p-12')
 
         const divHead = document.createElement('div')
-        divHead.setAttribute('class','mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#AD49E1]')
+        divHead.setAttribute('class','mb-3 text-sm font-bold tracking-[0.3em] text-[#AD49E1]')
         divHead.textContent = 'Movie Details'
-
-        const title = document.createElement('h1')
-        title.setAttribute('class','mb-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl')
-        title.textContent = data.title
 
         const genres = document.createElement('div')
         genres.setAttribute('class','mb-6 flex flex-wrap gap-2')
@@ -64,6 +60,10 @@ document.addEventListener('DOMContentLoaded',async () => {
             genres.append(span)
         });
 
+        const title = document.createElement('h1')
+        title.setAttribute('class','mb-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl')
+        title.textContent = data.title
+        
         const divIMDB = document.createElement('div')
         divIMDB.setAttribute('class','mb-8 flex items-center gap-4')
         
@@ -107,14 +107,14 @@ document.addEventListener('DOMContentLoaded',async () => {
         btnBack.textContent = 'Back to Movies'
         action.append(btnAdd,btnBack)
 
-        divR.append(divHead,title,genres,divIMDB,desc,action)
+        divR.append(genres,title,divHead,divIMDB,desc,action)
 
         const container = document.getElementById('container')
         container.append(divL,divR)
 
         const pathContent = document.getElementById('pathDetail')
         pathContent.textContent = data.title  
-          
+
     }catch(err){
         console.error(err)
     }    
