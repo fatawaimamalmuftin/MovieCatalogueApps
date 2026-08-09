@@ -188,7 +188,7 @@ if (loggedUser) {
 
     logoutMenu.textContent = 'Logout'
 
-    logoutMenu.setAttribute('class','absolute right-5 md:right-44 top-16 hidden rounded-lg border border-white/10 bg-red-700 px-5 py-1 text-sm font-medium text-white shadow-xl transition hover:bg-red-500')
+    logoutMenu.setAttribute('class','absolute right-4 md:right-53 top-16 hidden rounded-lg border border-white/10 bg-red-700 px-5 py-1 text-sm font-medium text-white shadow-xl transition hover:bg-red-500')
 
     document.body.append(logoutMenu)
 
@@ -233,13 +233,13 @@ if (loggedUser) {
             // const card = document.createElement('a')
             // card.setAttribute('href','./DetailMovie.html')
             card.setAttribute('id',e.title.replace(/\s+/g,'').toLowerCase())
-            card.setAttribute('class','cursor-pointer group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5')
+            card.setAttribute('class','flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:p-5')
 
             const divL = document.createElement('div')
             divL.setAttribute('class','shrink-0 overflow-hidden rounded-xl sm:w-[200px]')
 
             const imgL =document.createElement('img')
-            imgL.setAttribute('class','h-full w-full cursor-pointer object-cover transition duration-500 group-hover:scale-105')
+            imgL.setAttribute('class','h-full w-full')
             imgL.setAttribute('src',e.images)
             imgL.setAttribute('alt',e.title)
 

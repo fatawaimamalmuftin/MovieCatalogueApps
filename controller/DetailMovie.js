@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded',async () => {
         // console.log(data)
 
         const divL = document.createElement('div')
-        divL.setAttribute('class','relative h-[420px] overflow-hidden sm:h-[500px] lg:h-full lg:min-h-[600px]')
+        divL.setAttribute('class','relative h-[420px] sm:h-[500px] lg:h-full lg:min-h-[600px]')
 
         const img = document.createElement('img')
-        img.setAttribute('class','h-full w-full object-cover')
+        img.setAttribute('class','h-full w-full')
         img.setAttribute('alt',data.title)
         img.setAttribute('src',data.image)
 
@@ -111,7 +111,10 @@ document.addEventListener('DOMContentLoaded',async () => {
 
         const container = document.getElementById('container')
         container.append(divL,divR)
-    
+
+        const pathContent = document.getElementById('pathDetail')
+        pathContent.textContent = data.title  
+          
     }catch(err){
         console.error(err)
     }    
