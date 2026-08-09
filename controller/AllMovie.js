@@ -129,6 +129,7 @@ async function getMovie(token, pathP1, pathP2, pathP3, pathP4,pathP5) {
 
     const data = new Object()
 
+    data.id_Movie = e.id
     data.images = imgPath + e.poster_path
     data.genres = e.genres
     data.title = e.original_title
@@ -151,11 +152,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         allTotal.textContent = dataDetail.length + ' Movie'
 
         dataDetail.forEach((e) => {
-            // const card = document.createElement('div')
-            const card = document.createElement('a')
-            card.setAttribute('href','./DetailMovie.html')
+            const card = document.createElement('div')
+            // const card = document.createElement('a')
+            // card.setAttribute('href','./DetailMovie.html')
             card.setAttribute('id',e.title.replace(/\s+/g,'').toLowerCase())
-            card.setAttribute('class','group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5')
+            card.setAttribute('class','cursor-pointer group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5')
 
             const divL = document.createElement('div')
             divL.setAttribute('class','shrink-0 overflow-hidden rounded-xl sm:w-[200px]')
@@ -216,7 +217,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             const btnView = document.createElement('button')
             btnView.setAttribute('class','rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white')
             btnView.setAttribute('type','button')
+            btnView.setAttribute('id', 'btnDetail')
+            btnView.setAttribute('value', e.id_Movie)
             btnView.textContent = 'View Details'
+
+            btnView.addEventListener('click',async (e) => {
+                window.localStorage.setItem('selected',e.target.value)
+                window.location.href = './DetailMovie.html'
+            })
             
             const btnAdd = document.createElement('button')
             btnAdd.setAttribute('class','rounded-xl bg-[#AD49E1] px-5 py-2.5 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20')
