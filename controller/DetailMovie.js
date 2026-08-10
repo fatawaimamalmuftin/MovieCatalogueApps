@@ -171,15 +171,15 @@ if (loggedUser) {
         desc.append(h2,p)
         
         const action = document.createElement('div')
-        action.setAttribute('class','flex flex-wrap gap-3')
+        action.setAttribute('class','flex flex-wrap gap-3 mt-4')
 
-        const btnAdd = document.createElement('button')
-        btnAdd.setAttribute('class','rounded-xl bg-[#AD49E1] px-6 py-3 font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-xl hover:shadow-[#AD49E1]/20')
-        btnAdd.setAttribute('type','button')
+        const btnAdd = document.createElement('a')
+        btnAdd.setAttribute('class','rounded-xl bg-[#AD49E1] px-6 py-4 font-semibold text-[#2E073F] hover:bg-[#F25912]')
+        btnAdd.setAttribute('href','./MyWatchList.html')
         btnAdd.textContent = 'Add to Watchlist'
 
         const btnBack = document.createElement('a')
-        btnBack.setAttribute('class','rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-6 py-3 font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1]/50 hover:bg-[#AD49E1]/10 hover:text-white')
+        btnBack.setAttribute('class','rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-6 py-3 font-semibold text-[#EBD3F8] hover:text-red-500')
         btnBack.setAttribute('href','./AllMovie.html')
         btnBack.textContent = 'Back to Movies'
         action.append(btnAdd,btnBack)

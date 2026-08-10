@@ -10,10 +10,10 @@
     <script src="../../controller/AllMovie.js" defer></script>
 </head>
 
-<body class="min-h-screen bg-[#2E073F] text-white">
+<body class="min-h-screen bg-[#412B6B] text-white">
 
     <!-- NAVBAR -->
-    <header class="border-b border-[#EBD3F8]/30 bg-[#2E073F]/95">
+    <header class="border-b border-[#EBD3F8]/30 bg-[#412B6B]/95">
         <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
 
             <!-- Logo -->
@@ -35,21 +35,21 @@
 
                 <a
                     href="./AllMovie.html"
-                    class="text-[#EBD3F8]">
+                    class="text-[#EBD3F8]/70 hover:text-[#F25912]">
                     ALL FILMS
                 </a>
 
                 <a
                     id="webWatchlist"
                     href="./MyWatchList.html"
-                    class="text-[#EBD3F8]">
+                    class="text-[#EBD3F8]/70 hover:text-[#F25912]">
                     MY WATCHLISTS
                 </a>
 
                 <a
                     id="webLogin"
                     href="../auth/login.html"
-                    class="rounded-full bg-[#AD49E1] px-6 py-2.5 font-bold text-[#2E073F]">
+                    class="rounded-full bg-[#F25912] px-6 py-2.5 font-bold text-[#412B6B]">
                     LOGIN
                 </a>
 
@@ -59,7 +59,7 @@
             <a
                 id="mobileNav"
                 href="../auth/login.html"
-                class="rounded-full bg-[#AD49E1] px-4 py-2 text-sm font-semibold text-[#2E073F] md:hidden">
+                class="rounded-full bg-[#F25912] px-4 py-2 text-sm font-semibold text-[#412B6B] md:hidden">
                 LOGIN
             </a>
 
@@ -75,7 +75,7 @@
 
             <div class="mb-2 flex items-center justify-between">
                 <div>
-                    <p class="mb-2 text-sm font-medium uppercase text-[#AD49E1]">
+                    <p class="mb-2 text-sm font-medium uppercase]">
                         Movie Catalogue
                     </p>
 
@@ -84,7 +84,7 @@
                     </h1>
                 </div>
 
-                <span class="rounded-full border border-[#AD49E1]/30 bg-[#AD49E1]/10 px-4 py-2 text-sm font-medium text-[#EBD3F8]">
+                <span class="rounded-full border border-[#F25912]/30 bg-[#F25912]/10 px-4 py-2 text-sm font-medium text-[#EBD3F8]">
                     <!-- 30 Movies -->
                 </span>
             </div>
@@ -100,13 +100,13 @@
 
             <button
                 type="button"
-                class="flex items-center gap-2 rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#EBD3F8] backdrop-blur-sm transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white">
+                class="flex items-center gap-2 rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#EBD3F8] hover:text-white">
                 <span>GENRE</span>
             </button>
 
             <button
                 type="button"
-                class="flex items-center gap-2 rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#EBD3F8] backdrop-blur-sm transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white">
+                class="flex items-center gap-2 rounded-xl border border-[#EBD3F8]/20 bg-white/5 px-5 py-3 text-sm font-medium text-[#EBD3F8] hover:text-white">
                 <span>SORT BY IMDB</span>
             </button>
 
@@ -119,7 +119,7 @@
 
             <!-- Exmple MOVIE CARD -->
             <!-- <a href="./DetailMovie.html"
-                class="group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#AD49E1]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5">
+                class="group flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/10 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#F25912]/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-black/20 sm:flex-row sm:p-5">
                 <div class="shrink-0 overflow-hidden rounded-xl sm:w-[200px]">
                     <img
                         id="imgFlayer"
@@ -139,19 +139,19 @@
                         class="flex flex-wrap gap-2">
                             <li
                             id="liGenres" 
-                            class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                            class="rounded-full border border-[#F25912]/40 bg-[#F25912]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
                                 Action
                             </li>
 
                             <li
                             id="liGenres" 
-                            class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                            class="rounded-full border border-[#F25912]/40 bg-[#F25912]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
                                 Fiction
                             </li>
 
                             <li
                             id="liGenres" 
-                            class="rounded-full border border-[#AD49E1]/40 bg-[#AD49E1]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
+                            class="rounded-full border border-[#F25912]/40 bg-[#F25912]/10 px-3 py-1 text-xs font-medium text-[#EBD3F8]">
                                 Golden
                             </li>
                         </ul>
@@ -185,13 +185,13 @@
 
                         <button
                             type="button"
-                            class="rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white">
+                            class="rounded-xl border border-[#F25912]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#F25912] hover:bg-[#F25912]/10 hover:text-white">
                             View Details
                         </button>
 
                         <button
                             type="button"
-                            class="rounded-xl bg-[#AD49E1] px-5 py-2.5 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20">
+                            class="rounded-xl bg-[#F25912] px-5 py-2.5 text-sm font-semibold text-[#412B6B] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#F25912]/20">
                             Add to Watchlist
                         </button>
 

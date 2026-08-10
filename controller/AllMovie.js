@@ -181,14 +181,15 @@ if (loggedUser) {
     webLogin.removeAttribute('href')
     mobileNav.removeAttribute('href')
 
-    webLogin.setAttribute('class','flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#AD49E1] bg-[#AD49E1] text-sm font-bold text-white transition hover:bg-[#c76bea]')
+    webLogin.setAttribute('class','flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#AD49E1] bg-[#AD49E1] text-sm font-bold text-white hover:bg-green-500')
 
     // buat tombol logout
     const logoutMenu = document.createElement('button')
 
     logoutMenu.textContent = 'Logout'
 
-    logoutMenu.setAttribute('class','absolute right-4 md:right-53 top-16 hidden rounded-lg border border-white/10 bg-red-700 px-5 py-1 text-sm font-medium text-white shadow-xl transition hover:bg-red-500')
+    logoutMenu.setAttribute('class','absolute right-4 md:right-54 top-16 hidden rounded-lg border border-white/10 bg-red-700 px-5 py-1 text-sm font-medium text-white hover:bg-red-500')
+    //md:right-40
 
     document.body.append(logoutMenu)
 
@@ -233,7 +234,7 @@ if (loggedUser) {
             // const card = document.createElement('a')
             // card.setAttribute('href','./DetailMovie.html')
             card.setAttribute('id',e.title.replace(/\s+/g,'').toLowerCase())
-            card.setAttribute('class','flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:p-5')
+            card.setAttribute('class','flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/10 bg-[#211832] p-4 sm:flex-row sm:p-5')
 
             const divL = document.createElement('div')
             divL.setAttribute('class','shrink-0 overflow-hidden rounded-xl sm:w-[200px]')
@@ -292,7 +293,7 @@ if (loggedUser) {
             divAction.setAttribute('class','flex flex-wrap gap-3')
 
             const btnView = document.createElement('button')
-            btnView.setAttribute('class','rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] transition hover:border-[#AD49E1] hover:bg-[#AD49E1]/10 hover:text-white')
+            btnView.setAttribute('class','rounded-xl border border-[#AD49E1]/40 px-5 py-2.5 text-sm font-semibold text-[#EBD3F8] hover:text-[#F25912]')
             btnView.setAttribute('type','button')
             btnView.setAttribute('id', 'btnDetail')
             btnView.setAttribute('value', e.id_Movie)
@@ -304,7 +305,7 @@ if (loggedUser) {
             })
             
             const btnAdd = document.createElement('button')
-            btnAdd.setAttribute('class','rounded-xl bg-[#AD49E1] px-5 py-2.5 text-sm font-semibold text-[#2E073F] transition hover:bg-[#c76bea] hover:shadow-lg hover:shadow-[#AD49E1]/20')
+            btnAdd.setAttribute('class','rounded-xl bg-[#AD49E1] px-5 py-2.5 text-sm font-semibold text-[#2E073F] hover:text-white')
             btnView.setAttribute('type','button')
             btnAdd.textContent = 'Add to Watchlist'
 
