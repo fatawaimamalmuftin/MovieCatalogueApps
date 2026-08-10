@@ -121,7 +121,7 @@ if (loggedUser) {
         divL.append(img)
 
         const divR = document.createElement('div')
-        divR.setAttribute('class','flex flex-col justify-between sm:p-8 lg:p-12')
+        divR.setAttribute('class','flex flex-col justify-between p-6 sm:p-8 lg:p-12')
 
         const divHead = document.createElement('div')
         divHead.setAttribute('class','mb-3 text-sm font-bold tracking-[0.3em] text-[#AD49E1]')
