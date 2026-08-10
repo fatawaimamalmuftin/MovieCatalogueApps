@@ -27,6 +27,83 @@ const token = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMTdiZmE4Y2M2MDZlMWRmZTM4N
 // getDetailMovie(token,pathDetail,idMovie)
 
 document.addEventListener('DOMContentLoaded',async () => {
+
+const users = JSON.parse(localStorage.getItem('users') || '[]')
+
+// cari user yang sedang login
+const loggedUser = users.find((user) => user.logind === true)
+// console.log(loggedUser)
+
+//get nav untuk web
+const webNav = document.getElementById('webNav')
+
+//get nav untuk mobile
+const mobileNav = document.getElementById('mobileNav')
+
+// get sesuai id tombol LOGIN
+const webLogin = document.getElementById('webLogin')
+
+// get sesuai id MY WATCHLISTS
+const webWatchlist = document.getElementById('webWatchlist')
+// console.log(webWatchlist.style.display)
+
+// kalau ada user yang login
+if (loggedUser) {
+
+    // tampilkan watchlist
+    webWatchlist.style.display = ''
+
+
+    // ambil huruf pertama email
+    const firstLetter = loggedUser.email.charAt(0).toUpperCase()
+
+
+    // ubah LOGIN menjadi profile
+    webLogin.textContent = firstLetter
+    mobileNav.textContent = firstLetter
+    webLogin.removeAttribute('href')
+    mobileNav.removeAttribute('href')
+
+    webLogin.setAttribute('class','flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#AD49E1] bg-[#AD49E1] text-sm font-bold text-white transition hover:bg-[#c76bea]')
+
+    // buat tombol logout
+    const logoutMenu = document.createElement('button')
+
+    logoutMenu.textContent = 'Logout'
+
+    logoutMenu.setAttribute('class','absolute right-4 md:right-53 top-16 hidden rounded-lg border border-white/10 bg-red-700 px-5 py-1 text-sm font-medium text-white shadow-xl transition hover:bg-red-500')
+
+    document.body.append(logoutMenu)
+
+
+    // klik profile
+    webLogin.addEventListener('click', () => {
+        logoutMenu.classList.toggle('hidden')
+    })
+    mobileNav.addEventListener('click', () => {
+        logoutMenu.classList.toggle('hidden')
+    })
+
+
+    // klik logout
+    logoutMenu.addEventListener('click', () => {
+
+        loggedUser.logind = false
+
+        localStorage.setItem(
+            'users',
+            JSON.stringify(users)
+        )
+
+        window.location.reload()
+    })
+
+
+} else {
+    // kalau tidak ada yang login
+    webWatchlist.style.display = 'none'
+}
+
     const idMovie = window.localStorage.getItem('selected')
 
     try{
@@ -63,7 +140,7 @@ document.addEventListener('DOMContentLoaded',async () => {
         const title = document.createElement('h1')
         title.setAttribute('class','mb-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl')
         title.textContent = data.title
-        
+
         const divIMDB = document.createElement('div')
         divIMDB.setAttribute('class','mb-8 flex items-center gap-4')
         
